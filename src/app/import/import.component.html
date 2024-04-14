@@ -1,0 +1,10 @@
+
+<div class="container w-75">
+	<label class="form-label">Please, enter an organization and a repository url. ( Organization / Repository )  </label>
+	<form class="input-group mb-3" [formGroup]="importForm" (ngSubmit)="import()">
+		<span class="input-group-text " id="basic-addon">https://github.com/</span>
+		<input type="text" class="form-control" formControlName="organization" id="organization" aria-describedby="basic-addon" placeholder="organization...">
+		<input type="text" class="form-control" formControlName="repository" id="repository" aria-describedby="basic-addon" placeholder="repository...">
+		<button class="btn btn-outline-secondary" type="submit" id="button-addon" [disabled]="loading">Import</button>
+	</form>
+</div>
