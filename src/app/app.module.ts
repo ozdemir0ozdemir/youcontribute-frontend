@@ -11,13 +11,19 @@ import {HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { IssueListComponent } from './issue-list/issue-list.component';
+import { AcceptComponent } from './challenge/accept/accept.component';
+import { RejectComponent } from './challenge/reject/reject.component';
+import { ChallengeListComponent } from './challenge-list/challenge-list.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
 		ImportComponent,
-        IssueListComponent
+        IssueListComponent,
+        AcceptComponent,
+        RejectComponent,
+        ChallengeListComponent
 	],
 	imports: [
 		BrowserModule,

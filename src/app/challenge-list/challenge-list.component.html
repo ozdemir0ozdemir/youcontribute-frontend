@@ -1,0 +1,26 @@
+<div class="container">
+	<div *ngFor="let challenge of issueChallenges"
+		 class="row m-2 mb-5 bg-light p-3 border border-1 rounded-2 border-dark-subtle">
+		<div class="col-12 p-2  text-secondary">
+			<i><b>Challenge ID : </b> {{ challenge.id }} </i>
+		</div>
+		<div class="col-12 p-2  text-secondary">
+			<i><b>Challenge Status : </b> {{ challenge.status }} </i>
+		</div>
+		<div class="col-12 p-2  text-secondary">
+			<i><b>Issue Title : </b> {{ challenge.issue?.title }} </i>
+		</div>
+		<div class="col-12  p-2 text-secondary" >
+			<i><b>Issue Url :</b> {{ challenge.issue?.url }}</i>
+		</div>
+		<div class="col-12 p-2  text-secondary">
+			<i><b>Repository :</b> {{ challenge.issue?.repository?.organization }}/ {{ challenge.issue?.repository?.repository }}</i>
+		</div>
+
+<!--		<div class="col-12 p-2 border border-1 rounded-2 border-secondary-subtle d-none" style="background-color: #d9d9d9;">-->
+<!--			<pre style="white-space: pre-wrap; word-wrap: break-word; padding:10px;">{{ challenge.issue?.body }}</pre>-->
+<!--		</div>-->
+
+
+	</div>
+</div>

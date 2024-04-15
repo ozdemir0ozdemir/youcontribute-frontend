@@ -1,0 +1,6 @@
+export enum IssueChallengeStatus {
+	PENDING = "PENDING",
+	ACCEPTED = "ACCEPTED",
+	REJECTED = "REJECTED",
+	COMPLETED = "COMPLETED"
+}

@@ -10,7 +10,7 @@ import {Issue} from "../model/issue";
 })
 export class IssueListComponent implements OnInit{
 
-	issues: Issue[] = []
+	issues?: Issue[] = []
 
 	constructor(private activatedRoute: ActivatedRoute,
 	            private issueService: IssueService ) {
