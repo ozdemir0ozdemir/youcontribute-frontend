@@ -1,0 +1,19 @@
+<div class="container">
+	<div *ngFor="let issue of issues"
+		 class="row m-2 mb-5 ">
+		<div class="col-12 p-2 ">
+			<h5>{{ issue.title }} </h5>
+		</div>
+
+
+		<div class="col-12 p-2 border border-1 rounded-2 border-secondary-subtle">
+			<pre style="white-space: pre-wrap; word-wrap: break-word;">{{ issue.body }}</pre>
+		</div>
+
+		<div class="col-12  p-2 text-secondary" >
+			<i> <b>Repository :</b> {{ issue.repository.organization }}/ {{ issue.repository.repository }}</i>
+			<i>, <b> Issue Url :</b> {{ issue.url }}</i>
+		</div>
+
+	</div>
+</div>

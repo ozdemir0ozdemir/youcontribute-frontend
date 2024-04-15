@@ -1,1 +1,28 @@
-<p>home works!</p>
+<div class="container">
+	<br>
+	<h1>[Repositories]</h1>
+	<div class=" border border-top-0 border-end-0 border-start-0 border-bottom-1 border-dark row w-50 m-2">
+		<div class="col-5  p-2 ">
+			<h5>Organization</h5>
+		</div>
+		<div class="col-5 p-2">
+			<h5>Repository</h5>
+		</div>
+		<div class="col-1 p-2">
+			<h5>Actions</h5>
+		</div>
+	</div>
+	<div *ngFor="let repo of repositories" class=" border border-top-0 border-end-0 border-start-0 border-bottom-1 row w-50 m-2">
+		<div class="col-5  p-2 ">
+			<span>{{ repo.organization }}</span>
+		</div>
+		<div class="col-5 p-2">
+			<span>{{ repo.repository }}</span>
+		</div>
+		<div class="col-1 ">
+			<a class="btn btn-primary" [routerLink]="['/repository', repo.id, 'issues']">Issues</a>
+		</div>
+	</div>
+
+
+</div>

@@ -10,12 +10,14 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { IssueListComponent } from './issue-list/issue-list.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		ImportComponent
+		ImportComponent,
+        IssueListComponent
 	],
 	imports: [
 		BrowserModule,
