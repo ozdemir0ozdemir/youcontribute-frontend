@@ -4,7 +4,7 @@ import {IssueChallengeStatus} from "./issue-challenge-status";
 export class IssueChallenge {
 	id?:number;
 	issue?: Issue;
-	status?:IssueChallengeStatus;
+	status:IssueChallengeStatus = IssueChallengeStatus.PENDING;
 	createdAt?:Date;
-	updatedAt?:Date;
+	updatedAt?:string;
 }

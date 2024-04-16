@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ChallengeService} from "../service/challenge.service";
 import {IssueChallenge} from "../model/issue-challenge";
+import {formatDate} from "@angular/common";
 
 @Component({
   selector: 'app-challenge-list',
@@ -21,4 +22,5 @@ export class ChallengeListComponent implements OnInit {
 		});
 	}
 
+	protected readonly formatDate = formatDate;
 }
