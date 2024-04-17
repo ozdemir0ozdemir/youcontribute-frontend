@@ -6,15 +6,19 @@ import {IssueListComponent} from "./issue-list/issue-list.component";
 import {AcceptComponent} from "./challenge/accept/accept.component";
 import {RejectComponent} from "./challenge/reject/reject.component";
 import {ChallengeListComponent} from "./challenge-list/challenge-list.component";
+import {SigninComponent} from "./auth/signin/signin.component";
+import {CallbackComponent} from "./auth/callback/callback.component";
+import {PermissionService} from "./service/permission.service";
 
 const routes: Routes = [
-	{ path: "", redirectTo: "home", pathMatch: "full" },
-	{ path: "home", component: HomeComponent },
-	{ path: "import", component: ImportComponent },
-	{ path: "repository/:id/issues", component: IssueListComponent },
-	{ path: "challenge/:id/accept", component: AcceptComponent },
-	{ path: "challenge/:id/reject", component: RejectComponent },
-	{ path: "challenge", component: ChallengeListComponent }
+	{ path: "home", component: HomeComponent, canActivate: [PermissionService] },
+	{ path: "import", component: ImportComponent, canActivate: [PermissionService] },
+	{ path: "repository/:id/issues", component: IssueListComponent, canActivate: [PermissionService] },
+	{ path: "challenge/:id/accept", component: AcceptComponent, canActivate: [PermissionService] },
+	{ path: "challenge/:id/reject", component: RejectComponent, canActivate: [PermissionService] },
+	{ path: "challenge", component: ChallengeListComponent, canActivate: [PermissionService] },
+	{ path: "signin", component: SigninComponent },
+	{ path: "auth/github/callback", component: CallbackComponent }
 ];
 
 @NgModule({
